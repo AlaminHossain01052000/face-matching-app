@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
-from pikepdf import Pdf, PdfImage
+from flask_cors import CORS # type: ignore
+from pikepdf import Pdf, PdfImage # type: ignore
 import face_recognition
 from PIL import Image
 import numpy as np
@@ -115,6 +115,8 @@ def upload_files():
         },
         "result":result
     })
-
+@app.route('/')
+def home():
+    return jsonify({"message": "Flask App Deployed on Render!"})
 if __name__ == "__main__":
     app.run(debug=True)

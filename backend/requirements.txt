@@ -1,0 +1,7 @@
+flask
+flask-cors
+pikepdf
+face-recognition
+pillow
+numpy
+gunicorn
